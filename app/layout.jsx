@@ -1,17 +1,20 @@
-// pages/_app.js
-"use client";
-import "./globals.css"; // Adjust the path if necessary
-import Navbar from "@/components/Navbar/Navbar"; // Ensure this path is correct
+"use-client";
+// import React, { Component } from 'react';
+import { Navbar } from "@/components/componentindex";
 
-import React from 'react';
+import { Inter } from "next/font/google";
+import "./globals.css";
 
-const MyApp = ({ Component, pageProps }) => {
+const inter = Inter({ subsets: ["latin"] });
+
+
+
+export default function RootLayout({ children }) {
   return (
-    <div>
-      <Navbar />
-      <Component {...pageProps} />
-    </div>
+    <html lang="en">
+      <body className={inter.className}>{children}
+        <Navbar/>
+      </body>
+    </html>
   );
-};
-
-export default MyApp;
+}

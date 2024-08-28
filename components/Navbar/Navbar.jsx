@@ -1,14 +1,17 @@
 "use client";
 
-import React, { useState } from 'react';
-import Style from './Navbar.module.css';
-import Image from 'next/image';
+import React, { useState,useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+//IMPORT ICON
 import { MdNotifications } from 'react-icons/md';
 import { BsSearch } from 'react-icons/bs';
 import { CgMenuLeft, CgMenuRight } from 'react-icons/cg';
+
+//INTERNAL IMPORT
+import Style from './Navbar.module.css';
 import { Discover, HelpCenter, Notification, Profile, Sidebar } from './index';
-import { Button } from '../componentindex';
+import { Button } from "../componentindex";
 import images from '../../img';
 
 const Navbar = () => {
