@@ -65,13 +65,16 @@ const Navbar = () => {
                             height={100}
                         />
                     </div>
+
                     <div className={Style.navbar_container_left_box_input}>
                         <div className={Style.navbar_container_right_box_input}>
                             <input type='text' placeholder='search NFT' />
                             <BsSearch onClick={() => openMenu("Search")} className={Style.search_con} />
                         </div>
                     </div>
+
                 </div>
+
                 {/* End of left section */}
                 <div className={Style.navbar_container_right}>
                     <div className={Style.navbar_container_right_discover}>
@@ -119,13 +122,17 @@ const Navbar = () => {
                             </div>
                         </div>
 
+
                         {/* MENU BUTTON */}
                         <div className={Style.navbar_container_right_menuBtn}>
                             <CgMenuRight className={Style.navbar_menuIcon} onClick={openSideMenuToggle} />
                         </div>
                     </div>
+
                 </div>
+
             </div>
+
 
             {/* SIDEBAR COMPONENT */}
             {openSideMenu && (
@@ -134,6 +141,7 @@ const Navbar = () => {
                 </div>
             )}
         </div>
+        
     );
 };
 
