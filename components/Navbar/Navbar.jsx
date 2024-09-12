@@ -68,8 +68,8 @@ const Navbar = () => {
 
                     <div className={Style.navbar_container_left_box_input}>
                         <div className={Style.navbar_container_right_box_input}>
-                            <input type='text' placeholder='search NFT' />
-                            <BsSearch onClick={() => openMenu("Search")} className={Style.search_con} />
+                            <input type='text' placeholder='search' />
+                            <BsSearch onClick={() => openMenu("Search")} className={Style.search_icon} />
                         </div>
                     </div>
 
