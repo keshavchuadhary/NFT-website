@@ -103,7 +103,7 @@ const Sidebar = ({setOpenSideMenu}) => {
 
         <div className={Style.sideBar_box}>
          <Image src={images.logo} alt="logo" width={150} height={150}/>
-         <p>Discober the outstanding articles on all topics of NFT </p>
+         <p>Discover the outstanding articles on all topics of NFT </p>
         </div>
         <div className={Style.sideBar_social}>
           <a href='#'>

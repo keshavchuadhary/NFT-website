@@ -1,58 +1,59 @@
-
-.navbar{
+.navbar {
     width: 100%;
     padding-block: 1.5rem;
     position: relative;
-    z-index: 1111111111;
+    z-index: 111111111;
+    
 }
 
-.navbar_container{
+.navbar_container {
     width: 80%;
     margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two columns: one flexible and one auto-sized */
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 1rem; /* Space between left and right sections */
 }
 
-.navbar_container_left{
-    display: grid;
+.navbar_container_left {
+    display: grid; /* Nested grid for left section */
     grid-template-columns: 1fr 2fr;
     align-items: center;
 }
 
-.navbar_container_left_box_input_box{
+.navbar_container_left_box_input {
     width: 60%;
-    border:1px solid var(--icons-color);
+    border: 1px solid var(--icons-color);
     display: flex;
     align-items: center;
     padding: .5rem;
-    border-radius: 2rem;
+    border-radius: 5rem;
 }
 
-.navbar_container_right_box_input_box input{
+.navbar_container_left_box_input_box input {
     width: 90%;
     border: none;
     outline: none;
     background-color: transparent;
+    padding-left: 0.5rem;
 }
 
-.search_icon{
+.search_icon {
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.4rem;
+    margin-left: 2rem;
 }
 
 /* ----RIGHT */
 
-.navbar_container_right{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 1rem;
+.navbar_container_right {
+    display: grid; /* Use grid layout */
+    grid-template-columns: 1fr 1fr .5fr 1fr .3fr ; 
+    gap: 1rem; /* Space between items */
     align-items: center;
-    align-self: flex-end;
 }
+
 .navbar_container_right_discover{
     position: relative;
     cursor: pointer;
@@ -111,15 +112,54 @@
 .sideBar{
     position: fixed;
     top: 0;
+    left: 0;
     width: 24rem;
     background-color: var(--main-bg-color);
     box-shadow: var(--box-shadow);
     height: 100vh;
     overflow-y: auto;
-    display: none;
     z-index: 11111;
+    font-size: 2rem;
 }
 
 .sideBar::-webkit-scrollbar{
     display: none;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 768px){
+    .navbar_container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .navbar_container_left{
+        grid-template-columns: 1fr;
+    }
+
+    .navbar_container_right{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .navbar_container_right_menuBtn{
+        display: block;
+    }
+
+    .navbar_container_left_box_input{
+        display: none;
+    }
+
+    .navbar_container_right_discover{
+        display: none;
+    }
+
+    .navbar_container_right_help{
+        display: none;
+    }
+
+    .navbar_container_right_button{
+        display: none;
+    }
+
+    .sideBar{
+        display: block;
+    }
 }
