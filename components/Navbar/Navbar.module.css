@@ -9,15 +9,16 @@
 .navbar_container {
     width: 80%;
     margin: 0 auto;
-    display: grid; /* Use grid layout */
+
+    display: grid; 
     grid-template-columns: repeat(2, 1fr); /* Two columns: one flexible and one auto-sized */
     align-items: center;
     justify-content: space-between;
-    gap: 1rem; /* Space between left and right sections */
+    gap: 1rem; 
 }
 
 .navbar_container_left {
-    display: grid; /* Nested grid for left section */
+    display: grid; 
     grid-template-columns: 1fr 2fr;
     align-items: center;
 }
@@ -36,13 +37,12 @@
     border: none;
     outline: none;
     background-color: transparent;
-    padding-left: 0.5rem;
 }
 
 .search_icon {
     cursor: pointer;
     font-size: 1.4rem;
-    margin-left: 2rem;
+    margin-left: 4rem;
 }
 
 /* ----RIGHT */
@@ -100,6 +100,7 @@
 
 .navbar_container_right_menuBtn{
     display: none;
+    font-size: 2rem;
 }
 
 .menuIcon{

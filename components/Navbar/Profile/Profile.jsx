@@ -12,7 +12,7 @@ import images from "@/img";
 
 const Profile = () => {
   return (
-    <div className={Style.Profile}>
+    <div className={Style.profile}>
       <div className={Style.profile_account}>
         <Image src={images.user1}
         alt="user profile"
@@ -21,7 +21,7 @@ const Profile = () => {
         className={Style.profile_account_img}
         />
         <div className={Style.profile_account_info}>
-        <p>james</p>
+        <p>James Charles</p>
         <small>X087678698709...</small>
       </div>
 

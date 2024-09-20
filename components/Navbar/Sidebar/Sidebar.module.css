@@ -1,0 +1,30 @@
+.sideBar_box{
+    padding: 2rem;
+    border-bottom: 0.2px solid var(--icons-color);
+    margin-bottom: 1rem;
+}
+
+.sideBar_closeBtn{
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+}
+
+.sideBar_closeBtn:hover{
+    transform: rotate(45deg);
+}
+
+.sideBar_box p{
+    margin-top: -2rem;
+}
+
+.sideBar_social{
+    display: flex;
+    margin-top: 1rem;
+    gap: 1.3rem;
+    font-size: 1.3rem;
+    align-items: center;
+}
