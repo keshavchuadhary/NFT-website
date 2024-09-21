@@ -18,12 +18,13 @@ const Navbar = () => {
   const [openSideMenu, setOpenSideMenu] = useState(false);
 
   const openMenu = (btnText) => {
-    if (btnText === "Discover") {
+    
+    if (btnText == "Discover") {
       setDiscover(true);
       setHelp(false);
       setNotification(false);
       setProfile(false);
-    } else if (btnText === "Help Center") {
+    } else if (btnText == "Help Center") {
       setDiscover(false);
       setHelp(true);
       setNotification(false);
@@ -32,12 +33,33 @@ const Navbar = () => {
       setDiscover(false);
       setHelp(false);
       setNotification(false);
-      setProfile(false);  
+      setProfile(false);
     }
   };
 
-  const openNotification = () => setNotification(prev => !prev);
-  const openProfile = () => setProfile(prev => !prev);
+  const openNotification = () => {
+    if (!notification) {
+      setNotification(true);
+      setDiscover(false);
+      setHelp(false);
+      setProfile(false);
+    } else {
+      setNotification(false);
+    }
+  };
+
+  const openProfile = () => {
+    if (!profile) {
+      setProfile(true);
+      setHelp(false);
+      setDiscover(false);
+      setNotification(false);
+    } else {
+      setProfile(false);
+    }
+  };
+
+  
   const openSideMenuToggle = () => setOpenSideMenu(prev => !prev);
 
   return (
@@ -53,11 +75,10 @@ const Navbar = () => {
             />
           </div>
           <div className={Style.navbar_container_left_box_input}>
-            <div className={Style.navbar_container_right_box_input}>
+            
               <input type='text' placeholder='search NFT' />
               <BsSearch onClick={() => openMenu("Search")} className={Style.search_icon} />
-            </div>
-          </div>
+           </div>
         </div>
 
         <div className={Style.navbar_container_right}>
@@ -85,7 +106,7 @@ const Navbar = () => {
           </div>
 
           <div className={Style.navbar_container_right_button}>
-            <Button btnText="Create" />
+            <Button btnName="Create" handleClick={() => {}}/>
           </div>
 
           <div className={Style.navbar_container_right_profile_box}>
@@ -108,8 +129,8 @@ const Navbar = () => {
         </div>
       </div>
       {/* SIDERBAR COMPONENT */}
-      {!openSideMenu && (
-        <div className={Style.SideBar}>
+      {openSideMenu && (
+        <div className={Style.sideBar}>
           <Sidebar setOpenSideMenu={setOpenSideMenu} />
         </div>
       )}
