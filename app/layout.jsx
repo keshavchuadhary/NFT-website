@@ -1,6 +1,7 @@
 "use-client";
 // import React, { Component } from 'react';
-import { Navbar } from "@/components/componentindex";
+import { Navbar, Footer } from "@/components/componentindex";
+
 
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Navbar/>
+        <Footer/>
         {children}
         
       </body>
