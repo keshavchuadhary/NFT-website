@@ -1,6 +1,6 @@
 "use-client";
 // import React, { Component } from 'react';
-import { Navbar, Footer } from "@/components/componentindex";
+import { Navbar, Footer, Service, BigNFTSlider } from "@/components/componentindex";
 
 
 
@@ -19,6 +19,8 @@ export default function RootLayout({ children }) {
       <body>
       <Navbar/>
       {children}
+      <Service/>
+      <BigNFTSlider/>
       <Footer/>
         
       </body>
