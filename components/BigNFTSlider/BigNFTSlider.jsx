@@ -110,7 +110,9 @@ const BigNFTSlider = () => {
                     <h2>{sliderData[idNumber].title}</h2>
                     <div className={Style.bigNFTSlider_box_left_creator}>
                         <div className={Style.bigNFTSlider_box_left_creator_profile}>
-                            <Image src={sliderData[idNumber].image} 
+                            <Image
+                            className={Style.bigNFTSlider_box_left_creator_profile_img} 
+                            src={sliderData[idNumber].image} 
                             alt='profile image'
                             width={50}
                             height={50}
